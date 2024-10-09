@@ -44,14 +44,22 @@ public class Movement : MonoBehaviour
 
         Flip();
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z);
+            transform.localScale = new Vector3(1f, 2.5f, 1.5f);
+            jumpPower = 12f;
+            speed = 8f;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             transform.position = new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z);
             transform.localScale = new Vector3(0.5f, 1.5f, 1.0f);
-            jumpPower = 8f;
+            jumpPower = 6f;
             speed = 4f;
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        else if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
             transform.localScale = new Vector3(0.25f, 0.5f, 0.5f);
